@@ -104,7 +104,7 @@ var Topology = function( connection, options, serializers, unhandledStrategies, 
 		this.onReturned(raw);
 	}.bind( this ) );
 
-  this.createDefaultExchange().then( null, _.noop );
+  // this.createDefaultExchange().then( null, _.noop );
 	// delay creation to allow for subscribers to attach a handler
 	process.nextTick( function() {
 		this.createReplyQueue().then( null, onReplyQueueFailed );
